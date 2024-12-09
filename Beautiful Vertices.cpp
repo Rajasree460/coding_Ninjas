@@ -4,6 +4,7 @@ int beautifulVertices(int n,int m,vector<vector<int>>&edges){
 vector<vector<int>>adj(n+1);
 for(auto&e:edges)adj[e[0]].push_back(e[1]),adj[e[1]].push_back(e[0]);
 auto countComponents=[&](vector<vector<int>>&graph)->int{
+  
 vector<int>visited(n+1,0);
 int components=0;
 function<void(int)>dfs=[&](int u){
